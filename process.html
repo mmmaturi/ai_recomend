@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process | How It Was Built</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Process Page Specific Styles */
+        .chat-container {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 0 2rem;
+        }
+
+        .chat-message {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .user-message {
+            align-items: flex-end;
+        }
+
+        .agent-message {
+            align-items: flex-start;
+        }
+
+        .bubble {
+            padding: 1.5rem;
+            border-radius: 20px;
+            max-width: 80%;
+            position: relative;
+            line-height: 1.6;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .user-message .bubble {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            color: #fff;
+            border-bottom-right-radius: 5px;
+        }
+
+        .agent-message .bubble {
+            background: var(--bg-secondary);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            border-bottom-left-radius: 5px;
+        }
+
+        .message-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+        }
+
+        .timestamp {
+            font-size: 0.7rem;
+            opacity: 0.7;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .code-snippet {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            margin-top: 0.5rem;
+            display: block;
+            border: 1px solid var(--glass-border);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        /* Staggered Animation Delays */
+        .chat-message:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .chat-message:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .chat-message:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .chat-message:nth-child(4) {
+            animation-delay: 0.7s;
+        }
+
+        .chat-message:nth-child(5) {
+            animation-delay: 0.9s;
+        }
+
+        .chat-message:nth-child(6) {
+            animation-delay: 1.1s;
+        }
+
+        .chat-message:nth-child(7) {
+            animation-delay: 1.3s;
+        }
+
+        .chat-message:nth-child(8) {
+            animation-delay: 1.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ANTIGRAVITY</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="https://antigravity.google" target="_blank" class="btn-primary">GET ACCESS</a>
+        </div>
+    </nav>
+
+    <div class="chat-container">
+        <a href="index.html" class="back-link">← Back to Overview</a>
+
+        <div class="section-header">
+            <h2>The Build Process</h2>
+            <p>How this page was autonomously constructed through conversation.</p>
+        </div>
+
+        <!-- Log 1 -->
+        <div class="chat-message user-message">
+            <span class="message-label">USER</span>
+            <div class="bubble">
+                ANTIGRAVITYを友人に布教したい。<br>
+                エージェント機能を活かした成果物を生成し、既存AIとの違いを理解してもらいたい。
+            </div>
+        </div>
+
+        <div class="chat-message agent-message">
+            <span class="message-label">ANTIGRAVITY</span>
+            <div class="bubble">
+                了解しました。自律的に計画し、デザインし、実装する姿を見せる「紹介LP」を作成しましょう。<br>
+                <div class="code-snippet">Task Created: Demo Application Planning</div>
+            </div>
+        </div>
+
+        <!-- Log 2 -->
+        <div class="chat-message user-message">
+            <span class="message-label">USER</span>
+            <div class="bubble">
+                OK進めてください。<br>
+                ページのイメージはベンチャー企業の洗練さが欲しい。
+            </div>
+        </div>
+
+        <div class="chat-message agent-message">
+            <span class="message-label">ANTIGRAVITY</span>
+            <div class="bubble">
+                "Sophisticated Tech Venture" をテーマにデザインを更新しました。<br>
+                Deep Midnight BlueとNeon Cyanを基調とした、信頼感と先進性を表現するスタイルを実装します。
+            </div>
+        </div>
+
+        <!-- Log 3 -->
+        <div class="chat-message user-message">
+            <span class="message-label">USER</span>
+            <div class="bubble">
+                日本語で紹介したい。<br>
+                ページ下部に提供と作成として私の会社（Pipe Sekiguchi）へのリンクを作成して。
+            </div>
+        </div>
+
+        <div class="chat-message agent-message">
+            <span class="message-label">ANTIGRAVITY</span>
+            <div class="bubble">
+                コンテンツの完全な日本語化と、フッターへの企業バナーリンクの実装を完了しました。<br>
+                <div class="code-snippet">Updated: index.html, style.css</div>
+            </div>
+        </div>
+
+        <!-- Log 4 -->
+        <div class="chat-message user-message">
+            <span class="message-label">USER</span>
+            <div class="bubble">
+                一番初めに目に入る部分をもっとカッコいい画像にて。<br>
+                GEMINIで生成できないか？
+            </div>
+        </div>
+
+        <div class="chat-message agent-message">
+            <span class="message-label">ANTIGRAVITY</span>
+            <div class="bubble">
+                画像生成サービスが混雑していたため、同等のクオリティを持つ高解像度のサイバーパンク・アブストラクト画像を取得し、スローなズームアニメーションと共に実装しました。<br>
+                <div class="code-snippet">Deploying: High-Res Hero Asset</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">And thus, the page you see was born.</p>
+            <a href="index.html" class="btn-primary">Return to Home</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Antigravity. Generated by Google DeepMind.</p>
+
+            <a href="https://pipe-sekiguchi.co.jp/" target="_blank" class="company-banner">
+                <div class="banner-content">
+                    <span class="banner-label">Presented by</span>
+                    <span class="banner-name">Pipe Sekiguchi</span>
+                    <span class="banner-sub">株式会社パイプ関口</span>
+                </div>
+                <div class="banner-icon">→</div>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
