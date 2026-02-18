@@ -145,7 +145,7 @@ a {
     /* Dark overlay + Image */
     background:
         linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.3)),
-        url('../assets/hero-bg.jpg');
+        url('hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
